@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { Footer, Nav } from 'components';
 import HTML5Backend from 'react-dnd-html5-backend';
 import { DndProvider } from 'react-dnd';
+
 import Main from './containers/Main';
 
 function App() {
