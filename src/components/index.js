@@ -11,3 +11,8 @@ export { default as Feedback } from './Feedback';
 export { default as Loading } from './Loading';
 export { default as AboutUs } from './AboutUs';
 export { default as Snackbar } from './Snackbar';
+export { default as AdminDashboard } from './AdminDashboard';
+export { default as AdminMember } from './AdminMember';
+export { default as AdminImage } from './AdminImage';
+export { default as AdminComment } from './AdminComment';
+export { default as AdminFeedback } from './AdminFeedback';

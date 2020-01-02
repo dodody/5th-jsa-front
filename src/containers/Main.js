@@ -7,10 +7,28 @@ import { Route, Switch } from 'react-router-dom';
 const Landing = lazy(() => import('components/Landing'));
 const EventList = lazy(() => import('components/EventList'));
 const AboutUs = lazy(() => import('components/AboutUs'));
-const ResultPageContainer = lazy(() => import('containers/ResultPageContainer'));
-const SelectPageContainer = lazy(() => import('containers/SelectPageContainer'));
+const ResultPageContainer = lazy(() =>
+  import('containers/ResultPageContainer'),
+);
+const SelectPageContainer = lazy(() =>
+  import('containers/SelectPageContainer'),
+);
 const MyPageContainer = lazy(() => import('containers/MyPageContainer'));
 const FeedbackContainer = lazy(() => import('containers/FeedbackContainer'));
+const AdminImage = lazy(() => import('components/AdminImage'));
+const AdminComment = lazy(() => import('components/AdminComment'));
+const AdminFeedback = lazy(() => import('components/AdminFeedback'));
+const AdminMember = lazy(() => import('components/AdminMember'));
+
+// const ResultPageContainer = lazy(() =>
+//   import('containers/ResultPageContainer'),
+// );
+// const SelectPageContainer = lazy(() =>
+//   import('containers/SelectPageContainer'),
+// );
+// const MyPageContainer = lazy(() => import('containers/MyPageContainer'));
+// const FeedbackContainer = lazy(() => import('containers/FeedbackContainer'));
+const AdminContainer = lazy(() => import('containers/AdminContainer'));
 
 const Main = () => (
   <Suspense fallback={<Dody />}>
@@ -23,17 +41,16 @@ const Main = () => (
     <Route path="/EventPage" component={EventList} />
     <Route path="/feedback" component={FeedbackContainer} />
     <Route path="/AboutUs" component={AboutUs} />
+    <Route path="/admin" component={AdminContainer} />
+    <Route path="/adminImage" component={AdminImage} />
+    <Route path="/adminComment" component={AdminComment} />
+    <Route path="/adminFeedback" component={AdminFeedback} />
+    <Route path="/adminMember" component={AdminMember} />
   </Suspense>
 );
 
-
 function Dody() {
-  return (
-    <div>
-      ddd
-    </div>
-  );
+  return <div>ddd</div>;
 }
-
 
 export default Main;
